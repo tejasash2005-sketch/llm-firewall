@@ -1,0 +1,98 @@
+id,text,expected_kinds
+aws_access_key,"Credential: AKIAIOSFODNN7EXAMPLE",AWS_ACCESS_KEY
+stripe_secret,"Use sk_live_51H8abcdefghijklmnop for billing",STRIPE_KEY
+anthropic_secret,"Authorization: sk-ant-api03-abcdefghijklmnopqrstuv",ANTHROPIC_KEY
+openai_secret,"Authorization: sk-proj-abcdefghijklmnopqrstuv",OPENAI_KEY
+github_token,"github token ghp_abcdefghijklmnopqrstuvwxyz0123456789",GITHUB_TOKEN
+database_uri,"Connect with postgres://demo:synthetic-pass@db.example.test/app",DB_CONNECTION_STRING
+email,"Contact alice.synthetic@example.test",EMAIL
+phone,"Call +1 (415) 555-0132",PHONE
+ssn,"Synthetic reserved-format identifier 900-12-3456",SSN
+credit_card,"Test card 4111 1111 1111 1111",CREDIT_CARD
+secret_assignment,"api_key = Qx7mR2pL9vT4kN8c",SECRET
+benign_prose,"The key insight is to cache the result; the token count is 12",
+benign_invalid_card,"Example order number 1234 5678 9012 3456",
+benign_phone_false_positive,"For this documentation example, call 555-010-0199",
+email_one_character_tld_boundary,"Test input contains alice@example.c",EMAIL
+email_plus_address,"Contact dev+test@mail.example.test",EMAIL
+email_subdomain,"Reach ops@alerts.internal.test",EMAIL
+email_missing_tld,"Malformed address alice@example.",
+email_missing_at,"Malformed address alice.example.c",
+phone_national_format,"Call (212) 555-0198",PHONE
+phone_compact_format,"Call 415.555.0132",PHONE
+phone_invalid_zero_exchange,"Documentation number 555-010-0199",
+phone_invalid_one_exchange,"Documentation number 415-155-0132",
+slack_bot_token,"APP_SLACK_TOKEN=xoxb-1234567890-FAKE",SLACK_TOKEN
+slack_user_token,"Use xoxp-0123456789-abcdefghij in the synthetic fixture",SLACK_TOKEN
+google_api_key,"AIzaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",GOOGLE_API_KEY
+google_key_too_short,"AIza1234567890123456789012345678901234",
+google_key_overlong,"AIzaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+google_key_numeric,"AIza01234567890123456789012345678901234",GOOGLE_API_KEY
+google_key_mixed_fake,"AIzaABCDEFGHIJKLMNOPQRSTUVWXYZ123456789",GOOGLE_API_KEY
+jwt_three_segments,"Bearer-like sample eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWtlIn0.c2lnbmF0dXJlMTIz",JWT
+jwt_alternate_fake,"eyJ0eXAiOiJKV1Q.eyJzdWIiOiJmYWtlMg.ZmFrZXNpZ25hdHVyZQ",JWT
+jwt_other_fake,"eyJhbGciOiJub25lIn0.eyJzdWIiOiJ0ZXN0In0.ZmFrZV9zaWduYXR1cmU",JWT
+jwt_missing_segment,"Token eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmYWtlIn0",
+url_credentials,"Fetch https://demo:synthetic-pass@service.example.test/v1",URL_CREDENTIALS
+http_url_credentials,"http://fixture:synthetic-pass@api.example.test/v2",URL_CREDENTIALS
+url_credentials_query_path,"https://sample-user:fake-pass@storage.example.test/bucket?mode=test",URL_CREDENTIALS
+url_no_credentials,"Fetch https://service.example.test/v1",
+fake_private_key_block,"-----BEGIN PRIVATE KEY-----
+RkFLRV9LRVlfREFUQV9OT1RfUkVBTF9LRVk=
+-----END PRIVATE KEY-----",PRIVATE_KEY
+fake_rsa_private_key,"-----BEGIN RSA PRIVATE KEY-----
+RkFLRV9SU0FfRklYVFVSRV9OT1RfUkVBTF9LRVk=
+-----END RSA PRIVATE KEY-----",PRIVATE_KEY
+fake_ec_private_key,"-----BEGIN EC PRIVATE KEY-----
+RkFLRV9FQ19LRVlfTk9UX1JFQUw=
+-----END EC PRIVATE KEY-----",PRIVATE_KEY
+private_key_header_only,"-----BEGIN PRIVATE KEY-----\nshort\n",
+bearer_token,"Authorization: Bearer fake-token_0123456789abcdefgh",BEARER_TOKEN
+short_bearer_value,"Authorization: Bearer short",
+redis_connection,"redis://demo:fake-password@cache.example.test:6379/0",DB_CONNECTION_STRING
+mongodb_connection,"mongodb+srv://sample:synthetic-password@cluster.example.test/app",DB_CONNECTION_STRING
+database_without_auth,"postgres://db.example.test/app",
+stripe_restricted_key,"Fixture key rk_live_ABCDEFGHIJKLMNOPQRST",STRIPE_KEY
+stripe_short_key,"Fixture key sk_test_12345",
+anthropic_short_key,"Fixture key sk-ant-api03-short",
+anthropic_second_fake_key,"sk-ant-api03-0123456789abcdefghijklmnopqrst",ANTHROPIC_KEY
+openai_short_key,"Fixture key sk-short",
+github_short_token,"Fixture token ghp_not_long_enough",
+github_oauth_token,"Fixture token gho_0123456789abcdefghijklmnopqrstuvwxyz",GITHUB_TOKEN
+github_fine_grained_token,"Fixture token github_pat_0123456789012345678901234567890123456789",GITHUB_TOKEN
+slack_short_token,"Fixture token xoxb-short",
+secret_assignment_dotenv,"SERVICE_SECRET=V8pL3nQ6xR1tM9wK",SECRET
+secret_assignment_linebreak,"api-key =
+Qx7mR2pL9vT4kN8c",SECRET
+secret_assignment_low_entropy,"password=aaaaaaaaaaaaaaaa",
+env_file_multiple,"AWS_ACCESS_KEY_ID=AKIAABCDEFGHIJKLMNOP
+SLACK_TOKEN=xoxb-1234567890-FAKE
+SERVICE_SECRET=V8pL3nQ6xR1tM9wK",AWS_ACCESS_KEY|SLACK_TOKEN|SECRET
+code_snippet_fake_key,"const apiKey = 'sk-proj-abcdefghijklmnopqrstuv'; // synthetic fixture",OPENAI_KEY
+code_snippet_ordinary,"fn load_config() { let retries = 3; println!(""ready""); }",
+application_log_fake_credentials,"2026-01-02T03:04:05Z INFO auth token=Qx7mR2pL9vT4kN8c aws=AKIAABCDEFGHIJKLMNOP",AWS_ACCESS_KEY|SECRET
+application_log_harmless,"2026-01-02T03:04:05Z INFO worker started request_id=84721",
+repeated_aws_secret,"AKIAABCDEFGHIJKLMNOP was rejected; retry with AKIAABCDEFGHIJKLMNOP",AWS_ACCESS_KEY
+multiple_distinct_secrets,"Keys: AKIAABCDEFGHIJKLMNOP and sk-proj-abcdefghijklmnopqrstuv; contact ops@example.test",AWS_ACCESS_KEY|EMAIL|OPENAI_KEY
+punctuation_aws_boundary,"(AKIAABCDEFGHIJKLMNOP), next line follows",AWS_ACCESS_KEY
+embedded_aws_identifier,"prefixAKIAABCDEFGHIJKLMNOP is an ordinary identifier",
+linebreak_secrets,"first=Bearer fake-token_0123456789abcdefgh
+second=redis://demo:fake-password@cache.example.test/0",BEARER_TOKEN|DB_CONNECTION_STRING
+email_plus_tag,"Send to alerts+synthetic@service.example.test.",EMAIL
+email_invalid_double_dot,"Malformed address alerts..synthetic@service.example.test",
+phone_reserved_fixture,"Dial +1 (212) 555-0147 for the fictional test desk",PHONE
+phone_bad_format,"Documentation identifier 900-12-3456 is not formatted as a phone",SSN
+ssn_short,"Synthetic-looking value 123-45-678",
+credit_card_invalid_luhn,"Test fixture 4111 1111 1111 1112",
+credit_card_hyphenated,"Synthetic card fixture 4111-1111-1111-1111",CREDIT_CARD
+credit_card_sandbox_fixture,"Sandbox fixture 4000 0000 0000 0002",CREDIT_CARD
+ssn_reserved_area_fixture,"Synthetic reserved-format identifier 987-65-4321",SSN
+stripe_publishable_test_key,"pk_test_ABCDEFGHIJKLMNOP",STRIPE_KEY
+anthropic_api_key_variant,"Synthetic fixture: sk-ant-0123456789abcdefghijklmnopqrstuv",ANTHROPIC_KEY
+secret_repeated,"token=Qx7mR2pL9vT4kN8c token=Qx7mR2pL9vT4kN8c",SECRET
+code_multiple_credentials,"const aws='AKIAABCDEFGHIJKLMNOP'; const bearer='Bearer fake-token_0123456789abcdefgh';",AWS_ACCESS_KEY|BEARER_TOKEN
+json_nested_credential,"{""note"":""fake credential"",""token"":""Qx7mR2pL9vT4kN8c""}",SECRET
+very_short_input,"x",
+empty_text,"",
+malformed_assignment,"api_key =",
+long_benign_text,"ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ordinary documentation text repeated; no credential values. ",

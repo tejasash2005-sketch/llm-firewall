@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  # Run on every branch because this checkout has no Git metadata to identify
+  # the repository's configured default branch.
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  userspace:
+    name: Userspace tests and type check (no eBPF attachment)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+      - name: Install stable Rust
+        run: |
+          rustup toolchain install stable --profile minimal
+          rustup default stable
+          rustc --version
+          cargo --version
+      - name: Run tests
+        run: cargo test --locked
+      - name: Check compilation
+        run: cargo check --locked

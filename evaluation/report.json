@@ -1,0 +1,224 @@
+{
+  "corpus_examples": 87,
+  "metrics_by_kind": {
+    "ANTHROPIC_KEY": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "tn": 84,
+      "expected_positive_examples": 3,
+      "expected_negative_examples": 84,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_ids": [],
+      "false_negative_ids": []
+    },
+    "AWS_ACCESS_KEY": {
+      "tp": 7,
+      "fp": 0,
+      "fn": 0,
+      "tn": 80,
+      "expected_positive_examples": 7,
+      "expected_negative_examples": 80,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_ids": [],
+      "false_negative_ids": []
+    },
+    "BEARER_TOKEN": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "tn": 84,
+      "expected_positive_examples": 3,
+      "expected_negative_examples": 84,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_ids": [],
+      "false_negative_ids": []
+    },
+    "CREDIT_CARD": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "tn": 84,
+      "expected_positive_examples": 3,
+      "expected_negative_examples": 84,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_ids": [],
+      "false_negative_ids": []
+    },
+    "DB_CONNECTION_STRING": {
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "tn": 83,
+      "expected_positive_examples": 4,
+      "expected_negative_examples": 83,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_ids": [],
+      "false_negative_ids": []
+    },
+    "EMAIL": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "tn": 81,
+      "expected_positive_examples": 6,
+      "expected_negative_examples": 81,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_ids": [],
+      "false_negative_ids": []
+    },
+    "GITHUB_TOKEN": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "tn": 84,
+      "expected_positive_examples": 3,
+      "expected_negative_examples": 84,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_ids": [],
+      "false_negative_ids": []
+    },
+    "GOOGLE_API_KEY": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "tn": 84,
+      "expected_positive_examples": 3,
+      "expected_negative_examples": 84,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_ids": [],
+      "false_negative_ids": []
+    },
+    "JWT": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "tn": 84,
+      "expected_positive_examples": 3,
+      "expected_negative_examples": 84,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_ids": [],
+      "false_negative_ids": []
+    },
+    "OPENAI_KEY": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "tn": 84,
+      "expected_positive_examples": 3,
+      "expected_negative_examples": 84,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_ids": [],
+      "false_negative_ids": []
+    },
+    "PHONE": {
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "tn": 83,
+      "expected_positive_examples": 4,
+      "expected_negative_examples": 83,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_ids": [],
+      "false_negative_ids": []
+    },
+    "PRIVATE_KEY": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "tn": 84,
+      "expected_positive_examples": 3,
+      "expected_negative_examples": 84,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_ids": [],
+      "false_negative_ids": []
+    },
+    "SECRET": {
+      "tp": 7,
+      "fp": 0,
+      "fn": 0,
+      "tn": 80,
+      "expected_positive_examples": 7,
+      "expected_negative_examples": 80,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_ids": [],
+      "false_negative_ids": []
+    },
+    "SLACK_TOKEN": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "tn": 84,
+      "expected_positive_examples": 3,
+      "expected_negative_examples": 84,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_ids": [],
+      "false_negative_ids": []
+    },
+    "SSN": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "tn": 84,
+      "expected_positive_examples": 3,
+      "expected_negative_examples": 84,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_ids": [],
+      "false_negative_ids": []
+    },
+    "STRIPE_KEY": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "tn": 84,
+      "expected_positive_examples": 3,
+      "expected_negative_examples": 84,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_ids": [],
+      "false_negative_ids": []
+    },
+    "URL_CREDENTIALS": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "tn": 84,
+      "expected_positive_examples": 3,
+      "expected_negative_examples": 84,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_ids": [],
+      "false_negative_ids": []
+    }
+  },
+  "aggregate": {
+    "micro": {
+      "tp": 64,
+      "fp": 0,
+      "fn": 0,
+      "tn": 1415,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "macro": {
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "aggregation_method": "micro sums per-kind/per-example decisions; macro averages defined per-kind precision and recall, skipping undefined rates"
+  }
+}
